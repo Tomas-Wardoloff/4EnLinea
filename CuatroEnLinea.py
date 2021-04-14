@@ -28,5 +28,15 @@ def dibujarTablero(tablero):
 		for row in tablero:
 			print(row)
 
-secuencia = [1, 2, 3, 1]
-dibujarTablero(completarTableroEnOrden(secuencia,tablerovacio()))
+def tiroValido(secuencia):
+	for column in secuencia:
+		if column < 1 & column > 7:
+			return False
+	return True
+
+secuencia = [1, 2, 3, 1, 8]
+if tiroValido(secuencia):
+	dibujarTablero(completarTableroEnOrden(secuencia,tablerovacio()))
+	print("La secuencia es valida")
+else:                                                        #IndexError: list index out of range, ver porque me muestra el problema antes que el mensaje
+	print("Para que la secuencia sea valida los valores tienen que estar comprendidos entre el 1 y el 7")
