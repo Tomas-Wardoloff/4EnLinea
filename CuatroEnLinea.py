@@ -34,9 +34,20 @@ def tiroValido(secuencia):
 			return False
 	return True
 
-secuencia = [1, 2, 3, 1, 8]
+def contenidoColumna(nro_column, tablero):
+	column = []
+	for row in tablero:
+		cell = row[nro_column - 1]
+		column.append(cell)#append sirve para agregar un elemento a una lista
+	return column
+#-----------------------------------------------------------#
+secuencia = [1, 2, 3, 1]
+tablero = tablerovacio()
 if tiroValido(secuencia):
-	dibujarTablero(completarTableroEnOrden(secuencia,tablerovacio()))
+	tablero = completarTableroEnOrden(secuencia, tablero)
+	dibujarTablero(tablero)
 	print("La secuencia es valida")
-else:                                                        #IndexError: list index out of range, ver porque me muestra el problema antes que el mensaje
+else:#IndexError: list index out of range, ver porque me muestra el problema antes que el mensaje
 	print("Para que la secuencia sea valida los valores tienen que estar comprendidos entre el 1 y el 7")
+
+print(contenidoColumna(2, tablero))
