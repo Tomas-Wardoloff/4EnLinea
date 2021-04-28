@@ -26,13 +26,19 @@ def completarTableroEnOrden(secuencia, tablero):
 
 def dibujarTablero(tablero):
 		for row in tablero:
-			print(row)
+			for cell in row:
+				if cell == 0:
+					print(' ', end='')
+				else:
+					print(' %s ' % cell, end='')
+			print('')
 
 def tiroValido(secuencia):
 	for column in secuencia:
-		if column < 1 & column > 7:
+		if 1 > column > 7:
 			return False
 	return True
+	
 
 def contenidoColumna(nro_column, tablero):
 	columns = []
@@ -48,7 +54,7 @@ def contenidoFilas(nro_row, tablero):
 		rows.append(cell)
 	return rows
 
-def ContenidoTodasLasColumnas(tablero):
+def contenidoTodasLasColumnas(tablero):
 	columns = []
 	for nro_column in range(0, 7):
 		columns.insert(7,contenidoColumna(nro_column,tablero))
@@ -63,4 +69,8 @@ if tiroValido(secuencia):
 else:#IndexError: list index out of range, ver porque me muestra el problema antes que el mensaje
 	print("Para que la secuencia sea valida los valores tienen que estar comprendidos entre el 1 y el 7")
 
-print(contenidoColumna(2, tablero))
+print("#-----------------------------------------------------------#")
+print(contenidoColumna(1, tablero))
+print("#-----------------------------------------------------------#")
+print(contenidoFilas(1, tablero))
+print("#-----------------------------------------------------------#")
