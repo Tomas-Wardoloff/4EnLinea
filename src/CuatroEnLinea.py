@@ -1,20 +1,19 @@
 def tablerovacio():
     return[
-        ['|', 0, 0, 0, 0, 0, 0, 0, '|'],
-        ['|', 0, 0, 0, 0, 0, 0, 0, '|'],
-        ['|', 0, 0, 0, 0, 0, 0, 0, '|'],
-        ['|', 0, 0, 0, 0, 0, 0, 0, '|'],
-        ['|', 0, 0, 0, 0, 0, 0, 0, '|'],
-        ['|', 0, 0, 0, 0, 0, 0, 0, '|'],
-        ['+','-','-','-','-','-','-','-','+']
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
     ]
 
 #-----------------------------------------------------------#
 
 def soltarFichaEnColumna(ficha, column, tablero):
 		for row in range(6, 0, -1):
-				if tablero[row - 1][column] == 0:
-						tablero[row -1][column] = ficha
+				if tablero[row - 1][column - 1] == 0:
+						tablero[row -1][column - 1] = ficha
 						return
 
 #-----------------------------------------------------------#
@@ -32,13 +31,16 @@ def completarTableroEnOrden(secuencia, tablero):
 #-----------------------------------------------------------#
 
 def dibujarTablero(tablero):
-	for row in tablero:
-		for cell in row:
-			if cell == 0:
-				print('   ', end='')
+	for row in range(0,6):
+		print(' | ', end='')
+		for cell in range(0,7):
+			if tablero[row][cell] == 0:
+				print('   ',end='')
 			else:
-				print(f' {cell} ', end='')
-		print('')
+				print(f' {tablero[row][cell]} ',end='')
+		print(' | ', end='')
+		print()
+	print(" +- - - - - - - - - - - -+",end="")
 
 #-----------------------------------------------------------#
 
@@ -53,9 +55,8 @@ def tiroValido(secuencia):
 def contenidoColumna(nro_column, tablero):
 	columns = []
 	for row in tablero:
-		cell = row[nro_column]
-		if cell != '-':
-			columns.append(cell)#append sirve para agregar un elemento a una lista
+		cell = row[nro_column-1]
+		columns.append(cell)#append sirve para agregar un elemento a una lista
 	return columns
 
 #-----------------------------------------------------------#
@@ -64,27 +65,25 @@ def contenidoFila(nro_row, tablero):
 	rows = []
 	for indice, row in enumerate(tablero):
 		if indice == (nro_row - 1):
-			rows = tablero[indice]
-			del rows[0]
-			del rows[7]
+			rows.append(tablero[indice])
 			return rows
 
 #-----------------------------------------------------------#
 
 def contenidoTodasLasColumnas(tablero):
 	columns = []
-	for nro_column in range(0, 7):
-		columns.insert(7,contenidoColumna(nro_column,tablero))
+	for nro_column in range(1, 8):
+		columns.append(contenidoColumna(nro_column,tablero))
 	return columns
 
 #-----------------------------------------------------------#
 
-secuencia = [1, 2, 3, 7, 1, 7,]
+secuencia = [1, 2, 3, 7]
 tablero = tablerovacio()
 if tiroValido(secuencia):
 	tablero = completarTableroEnOrden(secuencia, tablero)
 	dibujarTablero(tablero)
-	print("La secuencia es valida")
+	print("\nLa secuencia es valida")
 else:
 	print("Para que la secuencia sea valida los valores tienen que estar comprendidos entre el 1 y el 7")
 
@@ -93,3 +92,4 @@ print(contenidoColumna(7, tablero))
 print("#-----------------------------------------------------------#")
 print(contenidoFila(6, tablero))
 print("#-----------------------------------------------------------#")
+print(contenidoTodasLasColumnas(tablero))
