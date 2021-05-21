@@ -1,4 +1,6 @@
-def tablerovacio():
+#----------------------------TEST-READY----------------------------#
+
+def tableroVacio():
     return[
         [0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0],
@@ -8,7 +10,7 @@ def tablerovacio():
         [0, 0, 0, 0, 0, 0, 0],
     ]
 
-#-----------------------------------------------------------#
+#----------------------------TEST-READY----------------------------#
 
 def soltarFichaEnColumna(ficha, column, tablero):
 		for row in range(6, 0, -1):
@@ -16,7 +18,7 @@ def soltarFichaEnColumna(ficha, column, tablero):
 						tablero[row -1][column - 1] = ficha
 						return
 
-#-----------------------------------------------------------#
+#----------------------------TEST-READY----------------------------#
 
 def completarTableroEnOrden(secuencia, tablero):
 	c = 0
@@ -42,7 +44,7 @@ def dibujarTablero(tablero):
 		print()
 	print(" +- - - - - - - - - - - -+",end="")
 
-#-----------------------------------------------------------#
+#----------------------------TEST-READY----------------------------#
 
 def tiroValido(secuencia):
 	for column in secuencia:
@@ -50,7 +52,7 @@ def tiroValido(secuencia):
 			return False
 	return True
 
-#-----------------------------------------------------------#
+#----------------------------TEST-READY----------------------------#
 
 def contenidoColumna(nro_column, tablero):
 	columns = []
@@ -59,16 +61,16 @@ def contenidoColumna(nro_column, tablero):
 		columns.append(cell)#append sirve para agregar un elemento a una lista
 	return columns
 
-#-----------------------------------------------------------#
+#----------------------------TEST-READY----------------------------#
 
 def contenidoFila(nro_row, tablero):
 	rows = []
 	for indice, row in enumerate(tablero):
 		if indice == (nro_row - 1):
-			rows.append(tablero[indice])
+			rows = tablero[indice]
 			return rows
 
-#-----------------------------------------------------------#
+#----------------------------TEST-READY----------------------------#
 
 def contenidoTodasLasColumnas(tablero):
 	columns = []
@@ -79,7 +81,7 @@ def contenidoTodasLasColumnas(tablero):
 #-----------------------------------------------------------#
 
 secuencia = [1, 2, 3, 7]
-tablero = tablerovacio()
+tablero = tableroVacio()
 if tiroValido(secuencia):
 	tablero = completarTableroEnOrden(secuencia, tablero)
 	dibujarTablero(tablero)
