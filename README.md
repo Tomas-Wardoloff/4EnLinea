@@ -1,4 +1,5 @@
 # Introudcción:
 
-Este es un trabajo para AAT 2021
-Alumno: Tomas Wardoloff
+Este es un trabajo para la materia Adaptación del Ambiente de Trabajo 2021 del Instituto Politécnico Superior.
+
+Alumno: Tomás Wardoloff
