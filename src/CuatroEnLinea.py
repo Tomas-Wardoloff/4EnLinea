@@ -80,7 +80,11 @@ def contenidoTodasLasColumnas(tablero):
 
 #-----------------------------------------------------------#
 
-secuencia = [1, 2, 3, 7]
+secuencia_input = input('Ingrese los valores de la secuencia: ')
+secuencia = []
+for item in secuencia_input.split(','):
+	secuencia.append(int(item))
+	
 tablero = tableroVacio()
 if tiroValido(secuencia):
 	tablero = completarTableroEnOrden(secuencia, tablero)
