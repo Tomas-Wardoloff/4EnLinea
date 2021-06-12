@@ -80,10 +80,10 @@ def contenidoTodasLasColumnas(tablero):
 
 #-----------------------------------------------------------#
 
-secuencia_input = input('Ingrese los valores de la secuencia: ')
-secuencia = []
-for item in secuencia_input.split(','):
-	secuencia.append(int(item))
+#secuencia_input = input('Ingrese los valores de la secuencia: ')
+secuencia = [1,2,3,4,7]
+#for item in secuencia_input.split(','):
+#	secuencia.append(int(item))
 	
 tablero = tableroVacio()
 if tiroValido(secuencia):
