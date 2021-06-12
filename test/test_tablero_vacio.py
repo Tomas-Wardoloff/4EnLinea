@@ -10,3 +10,17 @@ def test_tablero_vacio_tiene_7_columnas():
 
     assert len(tablero[0]) == 7
 
+def test_tablero_vacio_esta_vacio():
+    tablero = tableroVacio()
+
+    tablero1 = [
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0],
+    ]
+
+    assert tablero == tablero1
+
