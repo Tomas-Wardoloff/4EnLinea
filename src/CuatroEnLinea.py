@@ -72,30 +72,40 @@ def contenidoFila(nro_row, tablero):
 
 #----------------------------TEST-READY----------------------------#
 
+def contenidoTodasLasFilas(tablero):
+	rows_all = []
+	for row in tablero:
+		rows_all.append(row)
+	return rows_all
+
+#----------------------------TEST-READY----------------------------#
+
 def contenidoTodasLasColumnas(tablero):
-	columns = []
+	columns_all = []
 	for nro_column in range(1, 8):
-		columns.append(contenidoColumna(nro_column,tablero))
-	return columns
+		columns_all.append(contenidoColumna(nro_column,tablero))
+	return columns_all
 
 #-----------------------------------------------------------#
 
-#secuencia_input = input('Ingrese los valores de la secuencia: ')
+	#secuencia_input = input('Ingrese los valores de la secuencia: ')
+	#for item in secuencia_input.split(','):
+	#	secuencia.append(int(item))
+
 secuencia = [1,2,3,4,7]
-#for item in secuencia_input.split(','):
-#	secuencia.append(int(item))
-	
-tablero = tableroVacio()
 if tiroValido(secuencia):
-	tablero = completarTableroEnOrden(secuencia, tablero)
+	#tablero = tableroVacio()
+	tablero = completarTableroEnOrden(secuencia, tableroVacio())
 	dibujarTablero(tablero)
 	print("\nLa secuencia es valida")
+	print()
+	print("#-----------------------------------------------------------#")
+	print(f'Contenido de la última columna --> {contenidoColumna(7, tablero)}')
+	print("#-----------------------------------------------------------#")
+	print(f'Contenido de la última fila --> {contenidoFila(6, tablero)}')
+	print("#-----------------------------------------------------------#")
+	print(f'Contenido de todas las columnas: \n{contenidoTodasLasColumnas(tablero)}')
+	print("#-----------------------------------------------------------#")
+	print(f'COntenido de todas las filas: \n{contenidoTodasLasFilas(tablero)}')
 else:
 	print("Para que la secuencia sea valida los valores tienen que estar comprendidos entre el 1 y el 7")
-
-print("#-----------------------------------------------------------#")
-print(contenidoColumna(7, tablero))
-print("#-----------------------------------------------------------#")
-print(contenidoFila(6, tablero))
-print("#-----------------------------------------------------------#")
-print(contenidoTodasLasColumnas(tablero))
