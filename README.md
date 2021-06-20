@@ -1,7 +1,11 @@
 # Cuatro en línea
 Este es un trabajo para la materia  **Adaptación del ambiente de trabajo** 2021 del **Instituto Politécnico Superior** de la ciudad de Rosario, Argentina. En esta materia aprendemos sobre herramientas que nos permiten trabajar con software de forma profesional, tales como: *sistemas de control de versiones*, *testing automatizado*, *integración continua*, entre otras herramientas.
 
-En este archivo `README.dm` se encuentran documentadas las distintas clases de esta materia
+En este archivo `README.dm` se encuentran documentadas las distintas clases de esta materia.
+
+**Alumno:** *Tomás Wardoloff*
+
+**Profesor**: *Mariano D'agostino*
 
 ---------------
 
@@ -28,6 +32,7 @@ alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
 </p>
 
 **Resumen:**
+
 Todos los años se elige un juego como eje temático de la materia, este año utilizamos el [Cuatro en línea](http:/https://es.wikipedia.org/wiki/Conecta_4/ "Cuatro en línea"), el cual vamos a intentar recrear en python. Para poder desarrollarlo debemos saber que el tablero se encuentra conformado por 6 filas y 7 columnas y que las posiciones en la que se van a soltar las fichas van a estar dadas por una secuencia conformada por las columnas del tablero, donde el primer valor corresponde al jugador 1 y el segundo al jugador 2 y así con todos los valores. 
 
 El programa en python sería de la siguiente manera:
@@ -57,6 +62,7 @@ def soltarFichaEnColumna(ficha, columna, tablero):
 		return
 ```
 **Tarea:**
+
 Definir la función *completarTableroEnOrden* la cual toma como parámetros la secuencia y el tablero vacío y retornara el tablero ya completo y definir la función *dibujarTablero*, la cual debe representar el tablero en formato de texto en la terminal.
 
 <a name="Clase2"/>
@@ -73,7 +79,27 @@ alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
 
 **Resumen:**
 
+En esta clase se nos brinda una posible solución a la tarea de la clase anterior y se nos explica el funcionamiento de las distintas funciones que conforman el programa. Soluciones dadas:
+```python
+def completarTableroEnOrden(secuencia, tablero):
+	for indice, columna in enumerate(secuencia):
+		fichaNumero = 1 + (indice % 2)
+		soltarFichaEnColumna(fichaNumero, columna, tablero)
+	return tablero
+```
+```python
+def dibujarTablero(tablero):
+	for fila in tablero:
+		for celda in fila:
+			if celda == 0:
+				print(' ', end='')
+			else:
+				print(' %s ' % celda, end='')
+		print('')
+```
 **Tarea:**
+
+No hay tarea para esta clase.
 
 <a name="Parte2"/>
 
