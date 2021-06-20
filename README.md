@@ -1,46 +1,26 @@
 # Cuatro en línea
-Este es un trabajo para la materia  **Adaptación del ambiente de trabajo** 2021 del **Intituto Politécnico Superiro** de la ciudad de Rosario, Argentina. En esta materia aprendemos sobre herramientas que nos permiten trabajar con software de forma profecional, tales como: *sistemas de control de versiones*, *testing automatizado*, *integración continua*, entre otras herramientas.
-
-En este archivo `README.dm` se encuentran documentadas las distintas clases de esta materia
-
----------------
-
-##Primer Cuatrimestre
-####Tabla de contenidos
-   * [Clase 1](#Clase 1)
-   * [Clase 2 parte 1](#Clase 2 parte 1)
-   * [Clase 2 parte 2](#Clase 2 parte 2)
-   * [Clase 3](#Clase 3)
-   * [Clase 4](#Clase 4)
-   * [Clase 5](#Clase 5)
-   * [Clase 6](#Clase 6)
-   * [Clase 7](#Clase 7)
-   * [Clase 8](#Clase 8)
-   * [Clase 9](#Clase 9)
-
-# Cuatro en línea
 Este es un trabajo para la materia  **Adaptación del ambiente de trabajo** 2021 del **Instituto Politécnico Superior** de la ciudad de Rosario, Argentina. En esta materia aprendemos sobre herramientas que nos permiten trabajar con software de forma profesional, tales como: *sistemas de control de versiones*, *testing automatizado*, *integración continua*, entre otras herramientas.
 
 En este archivo `README.dm` se encuentran documentadas las distintas clases de esta materia
 
 ---------------
 
-##Primer Cuatrimestre
-####Tabla de contenidos
-* [Clase 1](#Clase 1)
-* [Clase 2](#Clase 2)
-	* [Parte 1](#Parte 1)
-	* [Parte 2](#Parte 2)
-* [Clase 3](#Clase 3)
-* [Clase 4](#Clase 4)
-* [Clase 5](#Clase 5)
-* [Clase 6](#Clase 6)
-* [Clase 7](#Clase 7)
-* [Clase 8](#Clase 8)
-* [Clase 9](#Clase 9)
+## Primer Cuatrimestre
+#### Tabla de contenidos
+* [Clase 1](#Clase1)
+* [Clase 2](#Clase2)
+	* [Parte 1](#Parte1)
+	* [Parte 2](#Parte2)
+* [Clase 3](#Clase3)
+* [Clase 4](#Clase4)
+* [Clase 5](#Clase5)
+* [Clase 6](#Clase6)
+* [Clase 7](#Clase7)
+* [Clase 8](#Clase8)
+* [Clase 9](#Clase9)
 
-##Clase 1
-
+## Clase 1
+<a name="Clase1"/>
 <p align="center">
 	<a href="https://www.youtube.com/watch?v=I6sT5VgwFUE" target="_blank"><img src="https://i.ytimg.com/vi/I6sT5VgwFUE/maxresdefault.jpg" 
 alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
@@ -78,8 +58,8 @@ def soltarFichaEnColumna(ficha, columna, tablero):
 **Tarea:**
 Definir la función *completarTableroEnOrden* la cual toma como parámetros la secuencia y el tablero vacío y retornara el tablero ya completo y definir la función *dibujarTablero*, la cual debe representar el tablero en formato de texto en la terminal.
 
-##Clase 2
-<a name="Parte 1"/>
+## Clase 2
+<a name="Parte1"/>
 **Parte 1:**
 <p align="center">
 	<a href="https://youtu.be/BEs03e0Lkkw" target="_blank"><img src="https://img.youtube.com/vi/BEs03e0Lkkw/maxresdefault.jpg" 
@@ -90,7 +70,7 @@ alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
 
 **Tarea:**
 
-<a name="Parte 2"/>
+<a name="Parte2"/>
 **Parte 2:**
 <p align="center">
 	<a href="https://youtu.be/yIUBjWA1LDE" target="_blank"><img src="https://img.youtube.com/vi/yIUBjWA1LDE/maxresdefault.jpg" 
@@ -101,7 +81,8 @@ alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
 
 **Tarea:**
 
-##Clase 3
+## Clase 3
+<a name="Clase3"/>
 <p align="center">
 	<a href="https://youtu.be/8jL0scwxzSw" target="_blank"><img src="https://i.ytimg.com/vi/8jL0scwxzSw/maxresdefault.jpg" 
 alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
@@ -111,7 +92,8 @@ alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
 
 **Tarea:**
 
-##Clase 4
+## Clase 4
+<a name="Clase4"/>
 <p align="center">
 	<a href="https://youtu.be/X6CP4by3s-Y" target="_blank"><img src="https://img.youtube.com/vi/X6CP4by3s-Y/maxresdefault.jpg" 
 alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
@@ -121,7 +103,8 @@ alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
 
 **Tarea:**
 
-##Clase 5
+## Clase 5
+<a name="Clase5"/>
 <p align="center">
 	<a href="https://youtu.be/3UU_Yg3Zda0" target="_blank"><img src="https://img.youtube.com/vi/3UU_Yg3Zda0/maxresdefault.jpg" 
 alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
@@ -131,7 +114,8 @@ alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
 
 **Tarea:**
 
-##Clase 6
+## Clase 6
+<a name="Clase6"/>
 <p align="center">
 	<a href="https://youtu.be/69fZF0xUnjA" target="_blank"><img src="https://img.youtube.com/vi/69fZF0xUnjA/maxresdefault.jpg" 
 alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
@@ -141,7 +125,8 @@ alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
 
 **Tarea**
 
-##Clase 7 
+## Clase 7
+<a name="Clase7"/>
 <p align="center">
 	<a href="https://youtu.be/djuiI8CqFdA" target="_blank"><img src="https://img.youtube.com/vi/djuiI8CqFdA/maxresdefault.jpg" 
 alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
@@ -151,7 +136,8 @@ alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
 
 **Tarea**
 
-##Clase 8
+## Clase 8
+<a name="Clase8"/>
 <p align="center">
 	<a href="https://youtu.be/DivoEmsAo0g" target="_blank"><img src="https://img.youtube.com/vi/DivoEmsAo0g/maxresdefault.jpg" 
 alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
@@ -161,7 +147,8 @@ alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
 
 **Tarea**
 
-##Clase 9
+## Clase 9
+<a name="Clase9"/>
 <p align="center">
 	<a href="https://youtu.be/iV9UfirtV44" target="_blank"><img src="https://img.youtube.com/vi/iV9UfirtV44/maxresdefault.jpg" 
 alt="IMAGE ALT TEXT HERE" width="426" height="240" border="10"/></a>
