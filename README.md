@@ -5,7 +5,15 @@ En este archivo `README.dm` se encuentran documentadas las distintas clases de e
 
 **Alumno:** *Tomás Wardoloff*
 
-**Profesor**: *Mariano D'agostino*
+**Profesor:** *Mariano D'agostino*
+
+**Lenguaje y herramientas:**
+
+<img align="left" alt="Sublime Text" width="26px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/1024px-Python.svg.png"/>
+<img align="left" alt="Git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
+<img align="left" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
+
+<br>
 
 ---------------
 
