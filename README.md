@@ -241,5 +241,8 @@ alt="Miniatura Clase 9" width="426" height="240" border="10"/></a>
 
 **Resumen:**
 
+En esta clase se ven ejemplos de proyectos que utilizan las distintas herramientas que estuvimos viendo a lo largo de las clases anteriores, tales como: [Visual Studio Code](https://github.com/microsoft/vscode), [Inskcap](https://gitlab.com/inkscape/inkscape), [Grafana](https://github.com/grafana/grafana)
+
 **Tarea**
 
+No hay tarea para esta clase.
