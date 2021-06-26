@@ -145,13 +145,30 @@ Instalar Git, crear un repositorio y agregar el archivo del prototipo y crear un
 
 ## Clase 3
 <p align="center">
-	<a href="https://youtu.be/8jL0scwxzSw" target="_blank"><img src="https://i.ytimg.com/vi/8jL0scwxzSw/maxresdefault.jpg" 
+    <a href="https://youtu.be/8jL0scwxzSw" target="_blank"><img src="https://i.ytimg.com/vi/8jL0scwxzSw/maxresdefault.jpg"
 alt="Miniatura Clase 3" width="426" height="240" border="10"/></a>
 </p>
 
 **Resumen:**
+Resolución propuesta de la tarea de la clase anterior:
+```python
+def secuenciaValida(secuencia):
+    for columna in secuencia:
+        if columna < 1 or columna > 7:
+            return False
+    return True
+```
+Hasta ahora todos los commits que hicimos viven en nuestro repositorio local, si quisiéramos hacer un respaldo de estos commits en la nube, tenemos que utilizar un repositorio remoto. Hay varias empresas que ofrecen estos servicios de repositorios remotos, tales como [GitHub](https://github.com), [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/product/), [Gogs](https://gogs.io/). Para esta materia vamos a utilizar [GitHub](https://github.com), donde deberemos crearnos una cuenta antes de poder crear un repositorio remoto.
+
+Al crear un nuevo repositorio se nos va a pedir un nombre para el mismo y si queremos que el repositorio sea público o privado. Luego de este paso se nos brindan varias opciones para poder hacer nuestros primeros commits a este repositorio. Como nosotros ya tenemos un repositorio con commits de forma local, lo que vamos a hacer es subir dicho commits al repositorio remoto. Para ello, primero debemos conectar nuestro repositorio local con el repositorio remoto, con el comando `git remote add origin https://dirección-del-repostorio.git`, luego subimos nuestros commits al mismo con el comando `git push origin master`, donde origin hace referencia al repositorio remoto y master hace referencia a la rama en la que nos encontramos (tema que se vera más adelante).
+
+> GitHub nos provee dos formas para conectarse al repositorio remoto: mediante *HTTPS* o mediante *SSH*. Si utilizamos *HTTPS* vamos a tener que escribir nuestra contraseña cada vez que queramos sincronizar los commits entre el repositorio remoto y el local. En cambio con *SSH*, se crea un juego de clave pública-privada y la conexión se hace automáticamente.
+
+Ahora si vamos a nuestra cuenta de [GitHub](https://github.com) y entramos al repositorio que creamos podremos ver el archivo con el que estuvimos trabajando las otras clases, los commits que realizamos, entre otras cosas.
 
 **Tarea:**
+
+Crear un repositorio público en [GitHub](https://github.com) y hacer un push de todos los commits que tengamos en nuestro repositorio local.
 
 <a name="Clase4"/>
 
@@ -164,6 +181,7 @@ alt="Miniatura Clase 4" width="426" height="240" border="10"/></a>
 **Resumen:**
 
 **Tarea:**
+
 
 <a name="Clase5"/>
 
