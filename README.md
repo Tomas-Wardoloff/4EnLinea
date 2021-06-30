@@ -180,8 +180,27 @@ alt="Miniatura Clase 4" width="426" height="240" border="10"/></a>
 
 **Resumen:**
 
+En esta clase vimos el funcionamiento de los comandos `git pull` y `git push`. Para poder entender mejor cómo funcionan estos comandos, se planteó la situación en la cual debemos trasladar nuestro trabajo en casa a una oficina de trabajo y viceversa, sin utilizar pendrives o correo electrónico, solo con el sistema de control de versiones.
+Una opción para esto es clonar el repositorio, con el comando `git clone https://dirección-del-repostorio.git`, el cual nos traerá una copia idéntica del repositorio que se encuentra en Github. Luego de clonar el repositorio tenemos que identificarnos como hicimos anteriormente con los comandos `git config user.name "user name"` y `git config user.email "user@email.com"`para posteriormente poder realizar commits.
+
+> En el caso que se trate de un repositorio público este se clonara sin más, en cambio, si es privado git nos consultara por nuestra contraseña o nuestro juego de llave pública-privada dependiendo de la seguridad que use el repositorio
+
+En esta clase también desarrollamos la función contenidoColumna, la cual toma como parámetro la posición de la columna a mostrar y el tablero.
+```python
+def contenidoColumna(nro_columna, tablero):
+    columna = []
+    for file in tablero:
+        celda = fila[nro_columna - 1]
+        columna.append(celda)
+    return columna
+```
+Luego de modificar nuestro código y de haber hecho el commit, con el comando `git status` podremos ver que nuestro repositorio local se encuentra x cantidad de commits por delante de nuestro repositorio remoto, es decir, que lo que tenemos en nuestra computadora no es igual a lo que se encuentra en GitHub. Para migrar dichos cambios al repositorio ejecutamos el comando `git push origin master` o `git push origin main` según corresponda. En caso contrario, si el repositorio de GitHub se encuentra x cantidad de commits por delante de nuestro repositorio local, podemos traernos los cambios con el comando `git pull origin master`
+
+> En el caso de que queramos hacer un commit de una posición de nuestro código, debemos utilizar el comando `git add -p prototipo.py` el cual nos permite hacer una instantánea de lo que vemos en pantalla y no de todo el código.
+
 **Tarea:**
 
+Definir la función contenidoFila, contenidoTodasLasFilas y contenidoTodasLasColumnas.
 
 <a name="Clase5"/>
 
