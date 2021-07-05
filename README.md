@@ -7,14 +7,6 @@ En este archivo `README.dm` se encuentran documentadas las distintas clases de e
 
 **Profesor:** *Mariano D'agostino*
 
-**Lenguaje y herramientas:**
-
-<img align="left" alt="Sublime Text" width="26px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/1024px-Python.svg.png"/>
-<img align="left" alt="Git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
-<img align="left" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
-
-<br>
-
 ---------------
 
 ## Primer Cuatrimestre
@@ -162,7 +154,7 @@ Hasta ahora todos los commits que hicimos viven en nuestro repositorio local, si
 
 Al crear un nuevo repositorio se nos va a pedir un nombre para el mismo y si queremos que el repositorio sea público o privado. Luego de este paso se nos brindan varias opciones para poder hacer nuestros primeros commits a este repositorio. Como nosotros ya tenemos un repositorio con commits de forma local, lo que vamos a hacer es subir dicho commits al repositorio remoto. Para ello, primero debemos conectar nuestro repositorio local con el repositorio remoto, con el comando `git remote add origin https://dirección-del-repostorio.git`, luego subimos nuestros commits al mismo con el comando `git push origin master`, donde origin hace referencia al repositorio remoto y master hace referencia a la rama en la que nos encontramos (tema que se vera más adelante).
 
-> GitHub nos provee dos formas para conectarse al repositorio remoto: mediante *HTTPS* o mediante *SSH*. Si utilizamos *HTTPS* vamos a tener que escribir nuestra contraseña cada vez que queramos sincronizar los commits entre el repositorio remoto y el local. En cambio con *SSH*, se crea un juego de clave pública-privada y la conexión se hace automáticamente.
+> [GitHub](https://github.com) nos provee dos formas para conectarse al repositorio remoto: mediante *HTTPS* o mediante *SSH*. Si utilizamos *HTTPS* vamos a tener que escribir nuestra contraseña cada vez que queramos sincronizar los commits entre el repositorio remoto y el local. En cambio con *SSH*, se crea un juego de clave pública-privada y la conexión se hace automáticamente.
 
 Ahora si vamos a nuestra cuenta de [GitHub](https://github.com) y entramos al repositorio que creamos podremos ver el archivo con el que estuvimos trabajando las otras clases, los commits que realizamos, entre otras cosas.
 
@@ -194,7 +186,7 @@ def contenidoColumna(nro_columna, tablero):
         columna.append(celda)
     return columna
 ```
-Luego de modificar nuestro código y de haber hecho el commit, con el comando `git status` podremos ver que nuestro repositorio local se encuentra x cantidad de commits por delante de nuestro repositorio remoto, es decir, que lo que tenemos en nuestra computadora no es igual a lo que se encuentra en GitHub. Para migrar dichos cambios al repositorio ejecutamos el comando `git push origin master` o `git push origin main` según corresponda. En caso contrario, si el repositorio de GitHub se encuentra x cantidad de commits por delante de nuestro repositorio local, podemos traernos los cambios con el comando `git pull origin master`
+Luego de modificar nuestro código y de haber hecho el commit, con el comando `git status` podremos ver que nuestro repositorio local se encuentra x cantidad de commits por delante de nuestro repositorio remoto, es decir, que lo que tenemos en nuestra computadora no es igual a lo que se encuentra en [GitHub](https://github.com). Para migrar dichos cambios al repositorio ejecutamos el comando `git push origin master` o `git push origin main` según corresponda. En caso contrario, si el repositorio de [GitHub](https://github.com) se encuentra x cantidad de commits por delante de nuestro repositorio local, podemos traernos los cambios con el comando `git pull origin master`
 
 > En el caso de que queramos hacer un commit de una posición de nuestro código, debemos utilizar el comando `git add -p prototipo.py` el cual nos permite hacer una instantánea de lo que vemos en pantalla y no de todo el código.
 
@@ -211,8 +203,22 @@ alt="Miniatura Clase 5" width="426" height="240" border="10"/></a>
 </p>
 
 **Resumen:**
+En esta clase vimos que son las ramas. Las ramas son simplemente etiquetas, las cuales apuntan al último commit de una historia de commits, es decir, que nuestra rama main que tenemos en nuestro repositorio es básicamente una flecha que apunta al último commit que hicimos y al mismo tiempo este apunta a un commit anterior.
+
+> Para poder entender mejor el funcionamiento de las ramas podes visitar la página [Learn Git Branching](https://learngitbranching.js.org/?locale=es_ES) la cual se uso en esta clase.
+
+Si deseamos crear otra rama en nuestro repositorio debemos ejecutar el comando `git branch NombreDeLaRama`, pero luego de crearlas debemos trasladarnos a la misma con el comando `git checkout NombreDeLaRama`, ya que sino todos los commits que hagamos van a seguir perteneciendo a la rama main.
+
+> Podemos crear una rama y movernos a ella, al mismo tiempo, con el comando `git checkout -b NombreDeLaRama`.
+
+En caso de queramos unir dos ramas, lo podemos hacer mediante un commit que las unifique, lo cual se denomina merge(mezclar). Estando en una de las ramas le indicamos a git que queremos mezclar los commits de la otra rama, con el comando `git merge NombreDeLaRama`, el cual lo que hace es crear un nuevo commit que tiene como ancestros a los últimos commits de las ramas que estoy mezclando. En caso de querer borrar una rama, en la cual no nos encontremos, debemos ejecutar el comando `git branch -D NombreDeLaRama`.
+También cabe destacar la existencia de un puntero/rama especial llamada *Head* la cual apunta al último commit de la rama en la que nos encontramos.
+
+Algo interesante que podemos ver con el tema de las ramas es el pull request. Supongamos que creamos una rama, hacemos commits en la misma y trasladamos dichos commits al repositorio remoto con el comando `git push origin NombreDeLaRama`. Cuando hacemos el push podremos ver que se nos da la opción de crear una pull request, lo cual es una instrucción que le damos a [GitHub](https://github.com) para crear una "petición" para mezclar el contenido de dos ramas. Desde la interfaz visual que nos brinda [GitHub](https://github.com) podemos ver varias cosas como las ramas a mezclar, los archivos que han sido modificados y también nos permite rechazar, aceptar y hacer comentarios sobre la pull request.
 
 **Tarea:**
+
+Crear una nueva rama en nuestro repositorio, en la cual debes modificar el prototipo del cuatro en línea para mostrar el borde del tablero, crear un pull request y finalmente hacer un merge entre la rama principal y la rama recién creada.
 
 <a name="Clase6"/>
 
