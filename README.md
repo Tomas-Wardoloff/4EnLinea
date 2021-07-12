@@ -242,7 +242,39 @@ alt="Miniatura Clase 7" width="426" height="240" border="10"/></a>
 
 **Resumen:**
 
+En esta clase hicimos uso del sistema de dependencias de paquetes, las dependencias son programas que escribe la comunidad, los cuales podemos descargar y utilizar. Para esta clase utilizamos un paquete el cual nos permite crear test, los test son pruebas que nos permiten comprobar el correcto funcionamiento de distintas partes de nuestro código.
+
+Para poder instalar dicha dependencia vamos a hacer uso de pip, el cual es el gestor de dependencias de python (viene instalado junto python), con el comando `pip install pytest` o `pip3 install pytest` (dependiendo de la versión de python que estemos utilizando) y en su defecto con el comando `py -m pip install pytest`.
+
+Antes de poder hacer uso de pytest debemos reorganizar la estructura de nuestro proyecto, creando dos carpetas llamadas *src* y *test*, donde la carpeta *src* contendrá un archivo llamado *_init_.py* (el nombre del archivo está compuesto por dos guiones bajos tanto del lado izquierdo de init como del lado derecho, pero Github no me deja ponerlos) y el archivo de nuestro proyecto. Hay que tener en cuenta que no podemos mover el archivo de nuestro proyecto así sin más, ya que git interpretará que el archivo ha sido borrado, por ende lo tenemos que mover desde la consola usando git, con el comando ``git mv prototipo.py src/``. Por otro lado la carpeta *test* contendrá un archivo *_init__.py* (al igual que la carpeta *src*) y todos los test que vayamos a realizar.
+
+Una vez ya reorganizado nuestro proyecto, podemos realizar nuestra primera prueba automatizada. Crearemos un nuevo archivo en el directorio *test*, llamado *test_tablero_vacio.py*, la estructura de este test será la siguiente:
+
+```python
+from src.prototipo import tableroVacio
+
+def test_tablero_vacio_tiene_6_filas():
+    tablero = tableroVacio()
+    
+    assert len(tablero) == 6
+```
+Este código lo que hace es importar la función tableroVacio desde nuestro prototipo y desde la función definida, comprueba que la longitud del tablero creado sea de 6. Ten en encuenta que todos los test que queramos hacer deben estar dentro de una función llamada test_algo y la instrucción encargada de la validación es assert. Para ejecutar nuestros test usaremos el comando ``python -m py.test``.
+
+De la misma manera, en el archivo anterior, podemos definir otra función que compruebe que el tablero posee 7 columnas, de la siguiente manera:
+```python
+from src.prototipo import tableroVacio
+
+def test_tablero_vacio_tiene_7_columnas():
+    tablero = tableroVacio()
+    
+    assert len(tablero[0]) == 7
+```
+Siguiendo esta estructura podemos validar las distintas partes de nuestro código, así mejorar la calidad de nuestro software. 
+
 **Tarea**
+
+Crear un test para cada una de las funciones del programa, menos de la función que imprime el contenido del tablero en la pantalla.
+
 
 <a name="Clase8"/>
 
