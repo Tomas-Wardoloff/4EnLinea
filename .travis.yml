@@ -1,9 +1,9 @@
 language: python
 python: # python version
-  - "3.6.9"
+  - "3.9.6"
 before_install: # upgrade pip to the last version
   - python3 -m pip install --upgrade pip
 install: # command to install dependencies
-  - pip3 install pytest
+  - pip3 install -r requirements.txt
 script: # command to run test
-  - pytest
+  - python3 -m pytest
