@@ -1,6 +1,6 @@
 language: python
 python: # python version
-  - "3.9.6"
+  - "3.6.9"
 before_install: # upgrade pip to the last version
   - python3 -m pip install --upgrade pip
 install: # command to install dependencies
