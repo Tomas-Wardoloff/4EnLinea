@@ -7,6 +7,8 @@ En este archivo `README.dm` se encuentran documentadas las distintas clases de e
 
 **Profesor:** *Mariano D'agostino*
 
+<img src="https://travis-ci.com/Tomas-Wardoloff/4EnLinea.svg?branch=master"/>
+
 ---------------
 
 ## Primer Cuatrimestre
@@ -303,3 +305,7 @@ En esta clase se ven ejemplos de proyectos que utilizan las distintas herramient
 **Tarea**
 
 No hay tarea para esta clase.
+
+---------------
+
+## Segundo Cuatrimestre
