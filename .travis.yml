@@ -4,6 +4,6 @@ python: # python version
 before_install: # upgrade pip to the last version
   - python3 -m pip install --upgrade pip
 install: # command to install dependencies
-  - pip3 install -r requirements.txt
+  - pip3 install pytest
 script: # command to run test
   - pytest
