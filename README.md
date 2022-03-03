@@ -1,7 +1,7 @@
 # Cuatro en línea
 Este es un trabajo para la materia  **Adaptación del ambiente de trabajo** 2021 del **Instituto Politécnico Superior** de la ciudad de Rosario, Argentina. En esta materia aprendemos sobre herramientas que nos permiten trabajar con software de forma profesional, tales como: *sistemas de control de versiones*, *testing automatizado*, *integración continua*, entre otras herramientas.
 
-En este archivo `README.dm` se encuentran documentadas las distintas clases de esta materia.
+En este archivo `README.md` se encuentran documentadas las distintas clases de esta materia.
 
 **Alumno:** *Tomás Wardoloff*
 
