@@ -1,4 +1,4 @@
-from src.CuatroEnLinea import completarTableroEnOrden
+from src.FuncionesJuego import completarTableroEnOrden
 
 def test_completar_tablero_en_orden():
     tablero = [

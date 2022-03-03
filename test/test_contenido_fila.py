@@ -1,4 +1,4 @@
-from src.CuatroEnLinea import contenidoFila
+from src.FuncionesJuego import contenidoFila
 
 def test_contenido_fila():
     tablero = [
