@@ -1,6 +1,4 @@
-from src.CuatroEnLinea import tiroValido
-from src.CuatroEnLinea import tableroVacio
-from src.CuatroEnLinea import dibujarTablero
+from src.FuncionesValidacion import *
 from src.CuatroEnLinea import completarTableroEnOrden
 
 def jugar(tablero, column, turno, gameOver):

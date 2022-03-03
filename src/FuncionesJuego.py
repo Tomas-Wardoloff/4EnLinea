@@ -1,17 +1,3 @@
-#----------------------------TEST-READY----------------------------#
-
-def tableroVacio():
-    return[
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0],
-    ]
-
-#----------------------------TEST-READY----------------------------#
-
 def soltarFichaEnColumna(ficha, column, tablero):
 		for row in range(6, 0, -1):
 				if tablero[row - 1][column - 1] == 0:
@@ -27,27 +13,6 @@ def completarTableroEnOrden(column, turno, tablero):
         soltarFichaEnColumna(2, column, tablero)
 
     return tablero
-
-#-----------------------------------------------------------#
-
-def dibujarTablero(tablero):
-	for row in range(0,6):
-		print(' | ', end='')
-		for cell in range(0,7):
-			if tablero[row][cell] == 0:
-				print('   ',end='')
-			else:
-				print(f' {tablero[row][cell]} ',end='')
-		print(' | ', end='')
-		print()
-	print(" +- - - - - - - - - - - -+",end="")
-
-#----------------------------TEST-READY----------------------------#
-
-def tiroValido(column):
-	if column < 1 or column > 7:
-	    return False
-	return True
 
 #----------------------------TEST-READY----------------------------#
 
@@ -82,3 +47,5 @@ def contenidoTodasLasColumnas(tablero):
 	for nro_column in range(1, 8):
 		columns_all.append(contenidoColumna(nro_column,tablero))
 	return columns_all
+
+#----------------------------TEST-READY----------------------------#
