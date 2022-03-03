@@ -20,15 +20,13 @@ def soltarFichaEnColumna(ficha, column, tablero):
 
 #----------------------------TEST-READY----------------------------#
 
-def completarTableroEnOrden(secuencia, tablero):
-	c = 0
-	for column in secuencia:
-		if c % 2 != 0:
-			soltarFichaEnColumna(2, column, tablero)
-		else:
-			soltarFichaEnColumna(1, column, tablero)
-		c += 1
-	return tablero
+def completarTableroEnOrden(column, turno, tablero):
+    if turno == 1:
+        soltarFichaEnColumna(1, column, tablero)
+    else:
+        soltarFichaEnColumna(2, column, tablero)
+
+    return tablero
 
 #-----------------------------------------------------------#
 
@@ -46,10 +44,9 @@ def dibujarTablero(tablero):
 
 #----------------------------TEST-READY----------------------------#
 
-def tiroValido(secuencia):
-	for column in secuencia:
-		if column < 1 or column > 7:
-			return False
+def tiroValido(column):
+	if column < 1 or column > 7:
+	    return False
 	return True
 
 #----------------------------TEST-READY----------------------------#
@@ -85,27 +82,3 @@ def contenidoTodasLasColumnas(tablero):
 	for nro_column in range(1, 8):
 		columns_all.append(contenidoColumna(nro_column,tablero))
 	return columns_all
-
-#-----------------------------------------------------------#
-
-	#secuencia_input = input('Ingrese los valores de la secuencia: ')
-	#for item in secuencia_input.split(','):
-	#	secuencia.append(int(item))
-
-secuencia = [1,2,3,4,7]
-if tiroValido(secuencia):
-	#tablero = tableroVacio()
-	tablero = completarTableroEnOrden(secuencia, tableroVacio())
-	dibujarTablero(tablero)
-	print("\nLa secuencia es valida")
-	print()
-	print("#-----------------------------------------------------------#")
-	print(f'Contenido de la última columna --> {contenidoColumna(7, tablero)}')
-	print("#-----------------------------------------------------------#")
-	print(f'Contenido de la última fila --> {contenidoFila(6, tablero)}')
-	print("#-----------------------------------------------------------#")
-	print(f'Contenido de todas las columnas: \n{contenidoTodasLasColumnas(tablero)}')
-	print("#-----------------------------------------------------------#")
-	print(f'COntenido de todas las filas: \n{contenidoTodasLasFilas(tablero)}')
-else:
-	print("Para que la secuencia sea valida los valores tienen que estar comprendidos entre el 1 y el 7")
