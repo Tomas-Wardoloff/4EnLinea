@@ -1,19 +1,24 @@
+import random
 from src.FuncionesValidacion import *
-from src.CuatroEnLinea import completarTableroEnOrden
+from src.FuncionesJuego import completarTableroEnOrden
 
 def jugar(tablero, column, turno, gameOver):
     if tiroValido(column):
         completarTableroEnOrden(column, turno, tablero)
         dibujarTablero(tablero)
 
-    gameOver = True
+def cambioTurno(turno):
+    if turno == "X":
+        return "O"
+    else:
+        return "X"
 
 if __name__ == "__main__":
     gameOver = False
-    while not gameOver:
-        turno = 1
-        tablero = tableroVacio()
-
-        column = int(input("\nIngrese una fila: "))
-        
+    tablero = tableroVacio()
+    turno = random.choice(["X","O"])
+    
+    while not gameOver:     
+        column = int(input(f"\nEs el turno de: {turno}. Ingrese una fila: "))
         jugar(tablero, column, turno, gameOver)
+        turno = cambioTurno(turno)

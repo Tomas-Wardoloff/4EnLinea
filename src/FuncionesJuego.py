@@ -7,10 +7,10 @@ def soltarFichaEnColumna(ficha, column, tablero):
 #----------------------------TEST-READY----------------------------#
 
 def completarTableroEnOrden(column, turno, tablero):
-    if turno == 1:
-        soltarFichaEnColumna(1, column, tablero)
-    else:
-        soltarFichaEnColumna(2, column, tablero)
+    if turno == "X":
+        soltarFichaEnColumna("X", column, tablero)
+    else:   
+        soltarFichaEnColumna("O", column, tablero)
 
     return tablero
 
