@@ -1,4 +1,4 @@
-from src.CuatroEnLinea import soltarFichaEnColumna
+from src.FuncionesJuego import soltarFichaEnColumna
 
 def test_soltar_ficha_en_columna():
     tablero0 = [

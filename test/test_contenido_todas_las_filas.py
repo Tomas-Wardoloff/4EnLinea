@@ -1,4 +1,4 @@
-from src.CuatroEnLinea import contenidoTodasLasFilas
+from src.FuncionesJuego import contenidoTodasLasFilas
 
 def test_contenido_todas_las_columna():
     tablero = [
