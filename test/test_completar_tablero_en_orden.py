@@ -16,8 +16,8 @@ def test_completar_tablero_en_orden():
         [0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 1, 0, 0],
+        [0, 0, 0, 0, "X", 0, 0],
     ]
 
-    assert tablero_completo == completarTableroEnOrden(5, 1, tablero)
+    assert tablero_completo == completarTableroEnOrden(5, "X", tablero)
 
